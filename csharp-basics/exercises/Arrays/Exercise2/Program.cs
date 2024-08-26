@@ -4,8 +4,6 @@ namespace Exercise2
 {
     class Program
     {       
-        // TODO: Write a C# program to sum values of an array.
-        // Array values are starting from min (including) till max (including) number. 
         private static void Main(string[] args)
         {
             var sum = 0;
@@ -15,12 +13,16 @@ namespace Exercise2
             Console.WriteLine("Please enter a max number");
             int maxNumber = int.Parse(Console.ReadLine());
 
-            /*
-            fixme
-            for (........) {
-            ........
+            int arraySize = maxNumber - minNumber + 1;
+            int[] arrayNumbers = new int[arraySize];
+
+            int i = 0;
+            while (i < arraySize)
+            {
+                arrayNumbers[i] = minNumber + i;
+                sum += arrayNumbers[i];
+                i++;
             }
-            */
 
             Console.WriteLine("The sum is " + sum);
             Console.ReadKey();
