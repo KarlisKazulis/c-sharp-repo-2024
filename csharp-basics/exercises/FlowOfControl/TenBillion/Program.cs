@@ -9,7 +9,21 @@ namespace TenBillion
         {
             Console.WriteLine("Input an integer number less than ten billion: ");
 
-            var input = Console.ReadLine();
+            var input = long.Parse(Console.ReadLine());
+
+            if (input > 1000000000)
+            {
+                Console.WriteLine("You entered a number larger than 10 billion");
+                return;
+            }
+
+            input = Math.Abs(input); // turns negative number into positive 
+
+            int countDigits = input.ToString().Length;
+
+            Console.WriteLine("The number " + input + " has " + countDigits + " digits");
+
+
         }
     }
 }
