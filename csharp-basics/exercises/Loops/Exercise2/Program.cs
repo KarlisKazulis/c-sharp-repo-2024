@@ -8,15 +8,17 @@ namespace Exercise2
         {
             int i, n;
             
-            Console.WriteLine("Input number of terms : ");
+            Console.WriteLine("Input number of terms: ");
             n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
+
+            int result = 1;
+
             for (i = 0; i < n; i++)
             {
+                result *= n;
+               
             }
-
+            Console.WriteLine(result);
             Console.ReadKey();
         }
     }
