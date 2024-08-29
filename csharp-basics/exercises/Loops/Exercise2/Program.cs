@@ -16,7 +16,6 @@ namespace Exercise2
             for (i = 0; i < n; i++)
             {
                 result *= n;
-               
             }
             Console.WriteLine(result);
             Console.ReadKey();
