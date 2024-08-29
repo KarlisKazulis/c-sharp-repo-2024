@@ -42,7 +42,6 @@
                         keepPlaying = false;
                     }
                 }
-            
             }
             Console.WriteLine($"In total you've got {totalPoints} points");
         }

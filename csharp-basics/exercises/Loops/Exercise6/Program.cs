@@ -52,9 +52,7 @@
                     Console.WriteLine();
                 }
             }
-
         }
-
     }
 }
 

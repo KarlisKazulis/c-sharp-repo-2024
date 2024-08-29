@@ -8,7 +8,6 @@ namespace Exercise10
             int min = InputAfterValidation("Min? ");
             int max = InputAfterValidation("Max? ");
             PrintNumberSquare(min, max);
-
         }
 
         static int InputAfterValidation(string input)
@@ -27,7 +26,6 @@ namespace Exercise10
                 {
                     Console.WriteLine("Please enter a valid integer");
                 }
-
             }
         } 
         
