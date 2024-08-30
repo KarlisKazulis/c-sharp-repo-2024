@@ -38,6 +38,7 @@ namespace Exercise10
                     negativeSumCount += n;
                 }
             }
+
             return new int[] { positiveCount, negativeSumCount };
         }
     }
