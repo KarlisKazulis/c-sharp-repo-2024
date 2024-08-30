@@ -15,6 +15,7 @@
             {
                 Console.WriteLine("Odd number");
             }
+
             Console.WriteLine("Bye!");
         }
     }
