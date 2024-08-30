@@ -12,6 +12,7 @@
             {
                 product = product * i;
             }
+
             Console.WriteLine(product);
         }
     }
