@@ -15,6 +15,7 @@
                 Console.WriteLine("Please enter a valid integer");
             }
         }
+
         static string CheckNumber(int number)
         {
             int sumOfDigits = CalculateSumOfDigits(number);
