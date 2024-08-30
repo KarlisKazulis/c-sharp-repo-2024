@@ -21,7 +21,8 @@
                     return $"I found Nemo at {i + 1}!";
                 }
             }
-            return $"I can't find Nemo :(";
+
+            return "I can't find Nemo :(";
         }
     }
 }
