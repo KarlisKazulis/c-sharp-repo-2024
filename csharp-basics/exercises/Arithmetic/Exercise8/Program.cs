@@ -42,6 +42,7 @@
 
             Console.WriteLine($"Total pay: ${totalPay}");
         }
+
         static void Main(string[] args)
         {
             CalculatePay(7.50, 35);
