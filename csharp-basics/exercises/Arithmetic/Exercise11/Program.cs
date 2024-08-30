@@ -36,6 +36,7 @@
                 return "H";
             }
         }
+
         static int CalculateSumOfDigits(int number)
         {
             int sum = 0;
