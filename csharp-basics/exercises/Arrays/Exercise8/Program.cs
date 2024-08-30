@@ -46,6 +46,7 @@ namespace Exercise8
                         missedLetters[missedCount++] = guess;
                         triesLeft--;
                     }
+
                     Console.Clear();
                 }
 
