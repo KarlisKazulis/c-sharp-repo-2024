@@ -25,6 +25,7 @@
                     stringCharacters[i] = char.ToLower(stringCharacters[i]);
                 }
             }
+
             string reversedString = string.Join("", stringCharacters);
             return reversedString;
         }
