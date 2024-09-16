@@ -3,7 +3,7 @@
 
 namespace DragRace
 {
-     public interface Icar
+     public interface ICar
      {
          void SpeedUp();
          string ShowCurrentSpeed();

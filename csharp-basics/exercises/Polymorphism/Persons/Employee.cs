@@ -13,12 +13,6 @@ namespace Persons
             _jobTitle = jobTitle;
         }
 
-        public string JobTitle
-        {
-            get { return _jobTitle; }
-            set { _jobTitle = value; }
-        }
-
         public override void Display()
         {
             base.Display();

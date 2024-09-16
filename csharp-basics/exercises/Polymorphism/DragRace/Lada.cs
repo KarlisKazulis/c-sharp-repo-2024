@@ -2,7 +2,7 @@
 
 namespace DragRace
 {
-    public class Lada : Icar, IBoostable
+    public class Lada : ICar, IBoostable
     {
         private int _currentSpeed = 0;
 

@@ -2,7 +2,7 @@ using System;
 
 namespace DragRace
 {
-    public class Bmw : Icar
+    public class Bmw : ICar
     {
         private int _currentSpeed = 0;
 

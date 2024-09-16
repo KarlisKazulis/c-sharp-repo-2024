@@ -8,7 +8,7 @@ namespace VendingMachine
     {
         static void Main(string[] args)
         {
-            VendingMachine vendingmachine = new VendingMachine("Skibidi");
+            IVendingMachine vendingmachine = new VendingMachine("Skibidi");
 
             vendingmachine.AddProduct("šprotes", new Money() { Euros = 2, Cents = 50 }, 40);
             vendingmachine.AddProduct("uzgriežņi", new Money() { Euros = 5, Cents = 0 }, 10);
@@ -50,7 +50,7 @@ namespace VendingMachine
                 $"Money returned: {refundMoney.Euros} EUros, {refundMoney.Cents} cents");
         }
 
-        private static void InsertAndDisplayChange(VendingMachine vendingmachine, Money coin)
+        private static void InsertAndDisplayChange(IVendingMachine vendingmachine, Money coin)
         {
             Money change = vendingmachine.InsertCoin(coin);
             if (change.Euros == 0 && change.Cents == 0)

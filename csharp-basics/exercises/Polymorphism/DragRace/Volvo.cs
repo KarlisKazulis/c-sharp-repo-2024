@@ -2,7 +2,7 @@
 
 namespace DragRace
 {
-    public class Volvo : Icar
+    public class Volvo : ICar
     {
         private int _currentSpeed = 0;
 

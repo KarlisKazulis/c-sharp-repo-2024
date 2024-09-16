@@ -21,7 +21,7 @@ namespace DragRace
 
         private static void Main(string[] args)
         {
-            var cars = new List<Icar>();
+            var cars = new List<ICar>();
             cars.Add(new Lada());
             cars.Add(new Volvo());
             cars.Add(new Tesla());
@@ -50,7 +50,7 @@ namespace DragRace
                 }
             }
 
-            Icar fastestCar = cars[0];
+            ICar fastestCar = cars[0];
             foreach (var car in cars)
             {
                 if (int.Parse(car.ShowCurrentSpeed()) > int.Parse(fastestCar.ShowCurrentSpeed()))
@@ -66,7 +66,5 @@ namespace DragRace
 
             Console.WriteLine($"The fastest car is {fastestCar.GetType().Name} and the speed is {fastestCar.ShowCurrentSpeed()} km/h");
         }
-
-
     }
 }
