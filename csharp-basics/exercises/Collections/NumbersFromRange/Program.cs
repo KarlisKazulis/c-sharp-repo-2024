@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace NumbersFromRange
 {
@@ -8,7 +9,6 @@ namespace NumbersFromRange
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             var random = new Random();
             var numbers = new List<int>();
             while (numbers.Count() < 10)
@@ -16,7 +16,12 @@ namespace NumbersFromRange
                 numbers.Add(random.Next(1, 100));
             }
 
-            //ToDo: Given an array of integers, write a query that returns list of numbers greater than 30 and less than 100.
+            var sortedList = numbers.Where(n => n > 30 && n < 100).ToList();
+           
+            foreach (int number in sortedList)
+            {
+                Console.WriteLine(number);
+            }
         }
     }
 }

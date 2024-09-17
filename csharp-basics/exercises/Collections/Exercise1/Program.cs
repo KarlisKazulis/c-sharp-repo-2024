@@ -1,26 +1,37 @@
-﻿namespace Exercise1
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
         private static void Main(string[] args)
         {
             string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
 
-            //todo - replace array with an List and print out the results
+            List<string> carsList = array.ToList();
+            Console.WriteLine("Cars list:");
+            Console.WriteLine(string.Join(", ", carsList));
 
-            //todo - replace array with a HashSet and print out the results
+            HashSet<string> carsHashSet = new HashSet<string>(array);
+            Console.WriteLine("Cars HashSet:");
+            Console.WriteLine(string.Join(", ", carsHashSet));
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            var carsDictionary = new Dictionary<string, string>
+            {
+                { "Audi", "Germany" },
+                { "BMW", "Germany" },
+                { "Honda", "Japan" },
+                { "Mercedes", "Germany" },
+                { "Volkswagen", "Germany" },
+                { "Tesla", "USA" }
+            };
+            Console.WriteLine("Cars dictionary:");
+            foreach (var car in carsDictionary)
+            {
+                Console.WriteLine($"{car.Key} - {car.Value}");
+            }
         }
     }
 }
