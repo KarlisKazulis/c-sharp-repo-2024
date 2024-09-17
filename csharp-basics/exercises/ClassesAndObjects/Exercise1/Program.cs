@@ -21,7 +21,7 @@
 
     public class Product
     {
-        private string name;
+        private string _name;
         private double price;
         private int amount;
 
