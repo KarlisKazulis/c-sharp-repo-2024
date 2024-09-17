@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 
 namespace DragRace
 {
@@ -18,7 +21,50 @@ namespace DragRace
 
         private static void Main(string[] args)
         {
-            
+            var cars = new List<ICar>();
+            cars.Add(new Lada());
+            cars.Add(new Volvo());
+            cars.Add(new Tesla());
+            cars.Add(new Lexus());
+            cars.Add(new Bmw());
+            cars.Add(new Audi());
+
+            cars.ForEach(car => car.StartEngine());
+
+            for (int i = 0; i < 10; i++)
+            {
+                foreach (var car in cars)
+                {
+                    car.SpeedUp();
+                }
+
+                if (i == 2)
+                {
+                    foreach (var car in cars)
+                    {
+                        if (car is IBoostable boostableCar)
+                        {
+                            boostableCar.UseNitrousOxideEngine();
+                        }
+                    }
+                }
+            }
+
+            ICar fastestCar = cars[0];
+            foreach (var car in cars)
+            {
+                if (int.Parse(car.ShowCurrentSpeed()) > int.Parse(fastestCar.ShowCurrentSpeed()))
+                {
+                    fastestCar = car;
+                }
+            }
+
+            foreach (var car in cars)
+            {
+                Console.WriteLine($"{car.GetType().Name}: {car.ShowCurrentSpeed()} km/h");
+            }
+
+            Console.WriteLine($"The fastest car is {fastestCar.GetType().Name} and the speed is {fastestCar.ShowCurrentSpeed()} km/h");
         }
     }
 }
