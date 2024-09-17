@@ -22,7 +22,7 @@
     public class Product
     {
         private string _name;
-        private double price;
+        private double _price;
         private int amount;
 
         public Product(string name, double priceAtStart, int amountAtStart)
